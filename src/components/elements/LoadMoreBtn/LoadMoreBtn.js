@@ -1,16 +1,13 @@
-import React from 'react';
-import './LoadMoreBtn.css';
+import React from "react"; //8k (gzipped: 3.3k)
 
-const LoadMoreBtn = (props) => {
-    return (
+import "./LoadMoreBtn.css";
 
-     
-            <div className="rmdb-loadmorebtn" onClick={props.onClick}>
-            <p>{props.text}</p>
-            </div>
-       
+const LoadMoreBtn = ({ text, onClick }) => {
+  return (
+    <div className="rmdb-loadmorebtn" onClick={() => onClick(true)}>
+      <p>{text}</p>
+    </div>
+  );
+};
 
-   )
-    
-}
 export default LoadMoreBtn;
